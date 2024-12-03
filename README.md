@@ -21,16 +21,16 @@ readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 ## Features
 
-• Convenient Extensions for SwiftUI:
-  • Add reusable modifiers, conditional styles, and adaptive UI patterns.
-• Custom Abstractions:
-  • Encapsulate complex properties like shadows, gradients, and colors.
-• Simplified Initializers:
-  •  Easily create SwiftUI `Color` instances from hex codes with alpha support.
-• Enhanced View Modifiers:
-  • Apply card styles, adaptive backgrounds, programmatic navigation, and more.
-• Computed Properties:
-  • Extract RGBA components from `Color`.
+* Convenient Extensions for SwiftUI:
+  * Add reusable modifiers, conditional styles, and adaptive UI patterns.
+* Custom Abstractions:
+  * Encapsulate complex properties like shadows, gradients, and colors.
+* Simplified Initializers:
+  * Easily create SwiftUI `Color` instances from hex codes with alpha support.
+* Enhanced View Modifiers:
+  * Apply card styles, adaptive backgrounds, programmatic navigation, and more.
+* *Computed Properties:
+  * Extract RGB(A) components from `Color`.
 
 ## Installation
 
