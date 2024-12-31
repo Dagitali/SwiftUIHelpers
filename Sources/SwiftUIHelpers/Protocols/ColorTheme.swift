@@ -14,6 +14,12 @@
 
 import SwiftUI
 
+#if os(iOS) || os(tvOS) || os(visionOS)
+import UIKit
+#elseif os(macOS)
+import AppKit
+#endif
+
 // MARK: - Public
 
 /// A protocol defining an app's color theme.
@@ -93,12 +99,6 @@ public extension ColorTheme {
     /// The secondary color, defaulting to system green.
     var secondaryColor: Color { Color(.systemGreen) }
 
-    /// The background color, defaulting to the system background color.
-    var backgroundColor: Color { Color(.systemBackground) }
-
-    /// The foreground color, defaulting to the system label color.
-    var foregroundColor: Color { Color(.label) }
-
     /// The accent color, defaulting to the system accent color.
     var accentColor: Color { Color.accentColor }
 
@@ -112,20 +112,6 @@ public extension ColorTheme {
 
     /// The destructive button color, defaulting to system red.
     var destructiveButtonColor: Color { Color(.systemRed) }
-
-    // MARK: Default Headers and Footers
-
-    /// The background color for headers, defaulting to light system gray.
-    var headerBackgroundColor: Color { Color(.systemGray6) }
-
-    /// The foreground color for headers, defaulting to the system label color.
-    var headerForegroundColor: Color { Color(.label) }
-
-    /// The background color for footers, defaulting to light system gray.
-    var footerBackgroundColor: Color { Color(.systemGray6) }
-
-    /// The foreground color for footers, defaulting to the system secondary label color.
-    var footerForegroundColor: Color { Color(.secondaryLabel) }
 
     // MARK: Default State Indicators
 
@@ -146,3 +132,61 @@ public extension ColorTheme {
     /// The focus color, defaulting to a more transparent system blue.
     var focusedColor: Color { Color(.systemBlue).opacity(0.1) }
 }
+
+#if os(iOS) || os(tvOS) || os(visionOS)
+
+// MARK: - Public (Protocol Defaults for iOS, tvOS, or visionOS)
+
+public extension ColorTheme {
+    // MARK: Default Core Colors
+
+    /// The background color, defaulting to the system background color.
+    var backgroundColor: Color { Color(.systemBackground) }
+
+    /// The foreground color, defaulting to the system label color.
+    var foregroundColor: Color { Color(.label) }
+
+    // MARK: Default Headers and Footers
+
+    /// The background color for headers, defaulting to light system gray.
+    var headerBackgroundColor: Color { Color(.systemGray6) }
+
+    /// The foreground color for headers, defaulting to the system label color.
+    var headerForegroundColor: Color { Color(.label) }
+
+    /// The background color for footers, defaulting to light system gray.
+    var footerBackgroundColor: Color { Color(.systemGray6) }
+
+    /// The foreground color for footers, defaulting to the system secondary label color.
+    var footerForegroundColor: Color { Color(.secondaryLabel) }
+}
+
+#elseif os(macOS)
+
+// MARK: - Public (Protocol Defaults for macOS)
+
+public extension ColorTheme {
+    // MARK: Default Core Colors
+
+    /// The background color, defaulting to the system background color.
+    var backgroundColor: Color { Color(.windowBackgroundColor) }
+
+    /// The foreground color, defaulting to the system label color.
+    var foregroundColor: Color { Color(.labelColor) }
+
+    // MARK: Default Headers and Footers
+
+    /// The background color for headers, defaulting to light system gray.
+    var headerBackgroundColor: Color { Color(.unemphasizedSelectedContentBackgroundColor) }
+
+    /// The foreground color for headers, defaulting to the system label color.
+    var headerForegroundColor: Color { Color(.labelColor) }
+
+    /// The background color for footers, defaulting to light system gray.
+    var footerBackgroundColor: Color { Color(.unemphasizedSelectedContentBackgroundColor) }
+
+    /// The foreground color for footers, defaulting to the system secondary label color.
+    var footerForegroundColor: Color { Color(.secondaryLabelColor) }
+}
+
+#endif
