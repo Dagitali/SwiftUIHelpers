@@ -1,7 +1,7 @@
 # SwiftUIHelpers
 
-A Swift package that includes an integrated collection SwiftUI extensions and related custom
-abstractions
+A Swift package that includes an integrated collection of SwiftUI extensions and related custom
+abstractions.
 
 ## Overview
 
@@ -21,16 +21,32 @@ readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 ## Features
 
-* Convenient Extensions for SwiftUI:
-  * Add reusable modifiers, conditional styles, and adaptive UI patterns.
-* Custom Abstractions:
-  * Encapsulate complex properties like shadows, gradients, and colors.
-* Simplified Initializers:
-  * Easily create SwiftUI `Color` instances from hex codes with alpha support.
-* Enhanced View Modifiers:
-  * Apply card styles, adaptive backgrounds, programmatic navigation, and more.
-* *Computed Properties:
-  * Extract RGB(A) components from `Color`.
+🔧 **Extensions**
+
+Enhance your SwiftUI views and types with powerful, reusable methods:
+
+* Hexadecimal color initializers for Color, supporting RGB and RGBA formats.
+* Conditional view modifiers for dynamic styling.
+* Adaptive backgrounds that respond to the system’s color scheme.
+
+🛠 **Custom Protocols**
+
+Simplify common patterns with flexible, reusable abstractions:
+
+* `ShadowConfiguration` and `ShadowType` for consistent shadow styling across your app.
+* `GradientConfiguration` for standardized gradient designs.
+* `ButtonType` and `ControlState` for theming and managing button states.
+
+⚡️ Custom Protocols
+
+Encapsulate reusable patterns for theming and customization:
+
+* `ColorTheme` for centralizing colors for your app’s design system, including button colors, state
+  indicators, and background styles.
+* `FontTheme` for standardizing text styles across your app with predefined font configurations.
+* `AppTheme` for combining color, font, and gradient themes for a cohesive design language.
+
+⚙️ **Utilities**
 
 ## Installation
 
@@ -42,9 +58,17 @@ To integrate SwiftUIHelpers into your project:
 2. Navigate to **File > Add Packages**.
 3. Enter the URL for this repository:
 
-   https://github.com/yourusername/SwiftUIHelpers
+   <https://github.com/yourusername/SwiftUIHelpers>
 
 4. Select the latest version and add it to your target.
+
+## Testing
+
+The package includes a comprehensive test suite to ensure reliability. Run tests with:
+
+```bash
+swift test
+```
 
 ## Documentation
 
@@ -67,14 +91,19 @@ Contributions are welcome!  If you’d like to add a new feature, fix a bug, or 
 documentation:
 
 1. Fork this repository.
-2. Create a new branch for your changes.
-3. Submit a pull request with a detailed description.
+2. Create a new feature branch for your changes (`git checkout -b feature/feature-name`).
+3. Commit your changes (`git commit -m "Add feature"`).
+4. Push to your branch (`git push origin feature-name`).
+5. Submit a pull request with a detailed description.
 
 ## License
 
-**SwiftUIHelpers** is licensed under the [MIT License](LICENSE).
+SwiftUIHelpers is available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-* Inspired by SwiftUI’s declarative UI paradigm.
-* Special thanks to the SwiftUI community for fostering creativity and collaboration.
+SwiftUIHelpers is inspired by common patterns in Swift development and its declarative UI
+paradigm, aiming to reduce boilerplate code and increase productivity.  Feedback and contributions
+are always appreciated!
+
+Special thanks to the SwiftUI community for fostering creativity and collaboration.
