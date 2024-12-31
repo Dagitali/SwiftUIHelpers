@@ -9,7 +9,7 @@
  See the LICENSE.txt file for this sample’s licensing information.
 
  Abstract:
- Helper extensions that enable creating colors via RGB(A) hex codes.
+ Helper extensions for working with `Color` types.
 */
 
 import SwiftUI
