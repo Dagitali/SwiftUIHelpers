@@ -44,6 +44,7 @@ struct AppThemeTests {
             theme.secondaryColor == Color(.systemGreen),
             "Secondary color does not match expected value."
         )
+#if os(iOS) || os(tvOS) || os(visionOS)
         #expect(
             theme.backgroundColor == Color(.systemBackground),
             "Background color does not match expected value."
@@ -52,6 +53,16 @@ struct AppThemeTests {
             theme.foregroundColor == Color(.label),
             "Foreground color does not match expected value."
         )
+#elseif os(macOS)
+        #expect(
+            theme.backgroundColor == Color(.windowBackgroundColor),
+            "Background color does not match expected value."
+        )
+        #expect(
+            theme.foregroundColor == Color(.labelColor),
+            "Foreground color does not match expected value."
+        )
+#endif
         #expect(
             theme.accentColor == Color.accentColor,
             "Accent color does not match expected value."
