@@ -19,8 +19,9 @@
 
 ---
 
+name: Test release
+
 on:
-  workflow_dispatch:  # Allow manual triggering.
   pull_request:
     branches:
       - bugfix/**
@@ -34,8 +35,7 @@ on:
       - develop
       - main
       - versions
-
-name: Test
+  workflow_dispatch:  # Allow manual triggering.
 
 jobs:
   test-macos:
