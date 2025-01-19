@@ -46,7 +46,7 @@ jobs:
       matrix:
         destination:
           - "platform=macOS"
-          # - "platform=macOS,variant=Mac Catalyst"
+          - "platform=macOS,variant=Mac Catalyst"
           - "platform=iOS Simulator,name=iPhone 14 Pro,OS=17.0"
           - "platform=tvOS Simulator,name=Apple TV 4K (3rd generation),OS=17.0"
           - "platform=visionOS Simulator,name=Vision Pro,OS=1.0"
