@@ -15,11 +15,13 @@
 # 3. https://github.com/actions
 # 4. https://github.com/features/actions
 # 5. https://github.com/mattmassicotte/nsui/blob/main/.github/workflows/ci.yml
-# 6. https://docs.github.com/en/actions
+# 6. https://github.com/maxim-lobanov/setup-xcode
+# 7. https://github.com/maxim-lobanov/setup-xcode/issues/90
+# 8. https://docs.github.com/en/actions
 
 ---
 
-name: Test release
+name: Test Swift package to be released
 
 on:
   pull_request:
@@ -50,6 +52,15 @@ jobs:
           - "platform=visionOS Simulator,name=Vision Pro,OS=1.0"
           - "platform=watchOS Simulator,name=Apple Watch Ultra 2,OS=10.0"
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Set up Swift
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
       - name: Run tests
-        run: swift test --destination "${{ matrix.destination }}"
+        run: |
+          xcodebuild test \
+            -scheme "SwiftUIHelpers" \
+            -destination "${{ matrix.destination }}" \
+            -enableCodeCoverage YES | xcpretty
