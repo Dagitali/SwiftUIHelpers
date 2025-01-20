@@ -48,6 +48,7 @@ concurrency:
 # Define environment variables.
 env:
   SCHEME: SwiftUIHelpers
+  SCHEME_LOWER: swiftuihelpers
   BUILD_PATH: /tmp/docbuild
   OUTPUT_PATH: docs
 
@@ -91,7 +92,7 @@ jobs:
             --output-path $OUTPUT_PATH \
             --hosting-base-path $SCHEME
           echo "<script>window.location.href += \
-            \"/documentation/${SCHEME,,}\"</script>" \
+            \"/documentation/$SCHEME_LOWER\"</script>" \
             > $OUTPUT_PATH/index.html;
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
