@@ -88,15 +88,15 @@ jobs:
           $(xcrun --find docc) process-archive \
             transform-for-static-hosting \
             $BUILD_PATH/Build/Products/Debug-iphoneos/$SCHEME.doccarchive \
-            --output-path docs \
+            --output-path $OUTPUT_PATH \
             --hosting-base-path $SCHEME
           echo "<script>window.location.href += \
-            \"/documentation/swiftuihelpers\"</script>" \
-            > docs/index.html;
+            \"/documentation/${SCHEME,,}\"</script>" \
+            > $OUTPUT_PATH/index.html;
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $OUTPUT_PATH
+          path: ${{ env.OUTPUT_PATH }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
