@@ -6,7 +6,7 @@
 //
 
 /*
- See the LICENSE.txt file for this sample’s licensing information.
+ See the LICENSE.txt file for this package’s licensing information.
 
  Abstract:
  A structure defining the configuration of a shadow.
