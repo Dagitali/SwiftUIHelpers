@@ -25,7 +25,7 @@ readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 Enhance your SwiftUI views and types with powerful, reusable methods:
 
-* Hexadecimal color initializers for Color, supporting RGB and RGBA formats.
+* Hexadecimal color initializers for `Color`, supporting RGB and RGBA formats.
 * Conditional view modifiers for dynamic styling.
 * Adaptive backgrounds that respond to the system’s color scheme.
 
@@ -36,8 +36,6 @@ Simplify common patterns with flexible, reusable abstractions:
 * `ShadowConfiguration` and `ShadowType` for consistent shadow styling across your app.
 * `GradientConfiguration` for standardized gradient designs.
 * `ButtonType` and `ControlState` for theming and managing button states.
-
-⚡️ Custom Protocols
 
 Encapsulate reusable patterns for theming and customization:
 
@@ -58,13 +56,13 @@ To integrate SwiftUIHelpers into your project:
 2. Navigate to **File > Add Packages**.
 3. Enter the URL for this repository:
 
-   <https://github.com/yourusername/SwiftUIHelpers>
+   <https://github.com/Dagitali/SwiftUIHelpers>
 
 4. Select the latest version and add it to your target.
 
 ## Testing
 
-The package includes a comprehensive test suite to ensure reliability. Run tests with:
+The package includes a comprehensive test suite to ensure reliability.  Run tests with:
 
 ```bash
 swift test
@@ -72,8 +70,8 @@ swift test
 
 ## Documentation
 
-For detailed API documentation and more usage examples, visit the SwiftUIHelpers documentation
-section (pending).  For project documentation, refer to the files listed in the subsections that
+For detailed API documentation and more usage examples, visit the [SwiftUIHelpers][docs]
+documentation site.  For project documentation, refer to the files listed in the subsections that
 follow.
 
 ### Community Health
@@ -107,3 +105,5 @@ paradigm, aiming to reduce boilerplate code and increase productivity.  Feedback
 are always appreciated!
 
 Special thanks to the SwiftUI community for fostering creativity and collaboration.
+
+[docs]: https://dagitali.github.io/SwiftUIHelpers/documentation/swiftuihelpers/
