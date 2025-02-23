@@ -7,6 +7,10 @@ request, you acknowledge and agree to licensing your contribution to [Dagitali L
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change.
 
+- [Contributing Guidelines](#contributing-guidelines)
+  - [Merge Request Process](#merge-request-process)
+  - [Code of Conduct](#code-of-conduct)
+
 ## Merge Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a
