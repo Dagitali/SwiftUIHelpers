@@ -12,6 +12,7 @@ troubleshooting bugs, authoring documentation, etc.  while developing or maintai
   - [Platforms: `git flow`](#platforms-git-flow)
   - [Platforms: GitHub](#platforms-github)
   - [Platforms: `pre-commit`](#platforms-pre-commit)
+  - [Programming Languages: `swift`](#programming-languages-swift)
   - [Software Engineering](#software-engineering)
 
 ## Markup Languages: Markdown
@@ -95,6 +96,12 @@ General
 
 1. <https://github.com/pre-commit/pre-commit>
 2. <https://pre-commit.com>
+
+## Programming Languages: `swift`
+
+General
+
+1. <https://docs.swift.org/swift-book>
 
 ## Software Engineering
 
