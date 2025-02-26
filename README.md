@@ -1,5 +1,16 @@
 # SwiftUIHelpers
 
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Dagitali/SwiftUIHelpers?sort=semver)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/generate-swift-package-api-docs.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/test-release.yml/badge.svg)
+![Codecov](https://codecov.io/gh/Dagitali/SwiftUIHelpers/branch/main/graph/badge.svg)
+![GitHub](https://img.shields.io/github/license/Dagitali/SwiftUIHelpers)
+![GitHub issues](https://img.shields.io/github/issues/Dagitali/SwiftUIHelpers)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Dagitali/SwiftUIHelpers)
+![GitHub top language](https://img.shields.io/github/languages/top/Dagitali/SwiftUIHelpers)
+![GitHub repo size](https://img.shields.io/github/repo-size/Dagitali/SwiftUIHelpers)
+![GitHub contributors](https://img.shields.io/github/contributors/Dagitali/SwiftUIHelpers)
+
 A Swift package that includes an integrated collection of SwiftUI extensions and related custom
 abstractions.
 
