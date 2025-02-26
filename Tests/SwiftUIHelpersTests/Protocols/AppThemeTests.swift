@@ -22,8 +22,12 @@ import Testing
 }
 */
 
+// MARK: - Mocks
+
 /// Define a default theme for testing purposes.
 struct DefaultAppTheme: AppTheme {}
+
+// MARK: - Test Suites
 
 /// A test suite to validate the functionality of `AppTheme`.
 // @Suite("AppTheme Tests", arguments: [DefaultAppTheme])
