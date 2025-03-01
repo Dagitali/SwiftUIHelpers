@@ -1,8 +1,11 @@
 # SwiftUIHelpers
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Dagitali/SwiftUIHelpers?sort=semver)
-![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/generate-swift-package-api-docs.yml/badge.svg)
-![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/test-release.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/lint.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/test.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/release.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/document.yml/badge.svg)
+![Build Status](https://github.com/Dagitali/SwiftUIHelpers/actions/workflows/publish.yml/badge.svg)
 ![Codecov](https://codecov.io/gh/Dagitali/SwiftUIHelpers/branch/main/graph/badge.svg)
 ![GitHub](https://img.shields.io/github/license/Dagitali/SwiftUIHelpers)
 ![GitHub issues](https://img.shields.io/github/issues/Dagitali/SwiftUIHelpers)
