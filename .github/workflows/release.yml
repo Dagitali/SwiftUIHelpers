@@ -48,15 +48,15 @@
 name: Release
 
 on:
-  workflow_dispatch:
+  pull_request:       # Allow automatic triggering for PRs.
+    types:
+      - closed
+  workflow_dispatch:  # Allow manual triggering.
     inputs:
       version:
         type: string
         required: true
         description: "SemVer version to release"
-  pull_request:
-    types:
-      - closed
 
 jobs:
   release:
