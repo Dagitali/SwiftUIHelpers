@@ -3,8 +3,7 @@
 #
 # Copyright © 2025 Dagitali LLC. All rights reserved.
 #
-# A GitHub Actions workflow file that automates packaging, tagging, and
-# distributing a software release.
+# A GitHub Actions workflow file that automates publishing software projects.
 #
 # See:
 # 1. https://github.com/actions
@@ -17,7 +16,7 @@
 name: Publish
 
 on:
-  push:
+  push:               # Allow automatic triggering for pushes.
     tags:
       - v*.*.*
 
