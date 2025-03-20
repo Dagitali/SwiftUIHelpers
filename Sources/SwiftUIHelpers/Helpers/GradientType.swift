@@ -19,6 +19,7 @@ import Foundation
 /// An enumeration representing the types of gradients available in a theme.
 ///
 /// Use this enum to specify the gradient style to be applied in your app's UI.
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public enum GradientType {
     /// A gradient used for primary elements or backgrounds.
     case primary

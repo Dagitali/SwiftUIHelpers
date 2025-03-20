@@ -19,6 +19,7 @@ import Foundation
 /// An enumeration representing the possible states of a control.
 ///
 /// Use this enum to define the visual state of UI elements like buttons or toggles.
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public enum ControlState {
     /// The default, enabled state of a control.
     case normal
