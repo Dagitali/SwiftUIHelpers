@@ -19,6 +19,7 @@ import SwiftUI
 /// A protocol defining an app's color theme.
 ///
 /// This protocol centralizes color themes for core UI elements, buttons, headers, footers, state indicators, and text highlights.
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public protocol ColorTheme {
     // MARK: Core Colors
 
