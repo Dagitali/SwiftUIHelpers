@@ -20,7 +20,7 @@ import SwiftUI
 ///
 /// This struct centralizes gradient properties, including its colors, start point, and end point. It is designed to
 /// provide a reusable and testable representation of gradient configurations in your app.
-
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public struct GradientConfiguration {
     /// The colors used in the gradient, ordered from start to end.
     let colors: [Color]

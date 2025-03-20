@@ -20,6 +20,7 @@ import Foundation
 ///
 /// Use this enum to define the style or purpose of a button, such as primary actions, secondary actions, or
 /// destructive actions.
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public enum ButtonType {
     /// A primary button, typically used for the main action.
     case primary

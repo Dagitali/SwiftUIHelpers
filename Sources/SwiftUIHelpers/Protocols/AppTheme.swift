@@ -20,6 +20,7 @@ import SwiftUI
 ///
 /// Use this protocol to centralize theming elements like fonts, colors, gradients, and shadows.
 /// You can define custom themes by conforming to this protocol.
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public protocol AppTheme: ColorTheme, FontTheme {
     // MARK: Gradients
 
