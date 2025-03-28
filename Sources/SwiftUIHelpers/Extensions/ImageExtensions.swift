@@ -1,5 +1,5 @@
 //
-//  MultiplatformExtensions.swift
+//  ImageExtensions.swift
 //  SwiftUIHelpers
 //
 //  Copyright © 2025 Dagitali LLC. All rights reserved.
@@ -9,24 +9,22 @@
  See the LICENSE.txt file for this package’s licensing information.
 
  Abstract:
- Helper extensions for simplifying multiplatform development.
+ Helper extensions for working with `Image` types.
 */
 
-#if canImport(UIKit)
-import UIKit
-#elseif canImport(AppKit)
-import AppKit
-#endif
+import SwiftUI
 
-// MARK: - Public
+// MARK: - Internal Extensions
 
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
-public extension PlatformImage {
-    var imageData: Data? {
+public extension Image {
+    // MARK: Initializers
+
+    init(image: PlatformImage) {
 #if canImport(UIKit)
-        pngData()
+        self.init(uiImage: image)
 #elseif canImport(AppKit)
-        tiffRepresentation
+        self.init(nsImage: image)
 #endif
     }
 }
