@@ -20,6 +20,9 @@ abstractions.
 - [SwiftUIHelpers](#swiftuihelpers)
   - [Overview](#overview)
   - [Features](#features)
+    - [Extensions](#extensions)
+    - [Custom Protocols](#custom-protocols)
+    - [Utilities](#utilities)
   - [Installation](#installation)
     - [Using Swift Package Manager (SPM)](#using-swift-package-manager-spm)
   - [Testing](#testing)
@@ -39,45 +42,45 @@ abstractions to handle recurring tasks and enhance developer productivity.
 
 This package focuses on providing practical, reusable extensions and abstractions that:
 
-* Simplify common patterns in SwiftUI.
-* Standardize customizations like gradients, shadows, and colors.
-* Extend SwiftUI’s capabilities without overriding or replacing its native functionality.
+- Simplify common patterns in SwiftUI.
+- Standardize customizations like gradients, shadows, and colors.
+- Extend SwiftUI’s capabilities without overriding or replacing its native functionality.
 
 By integrating SwiftUIHelpers into your project, you can reduce boilerplate code, improve
 readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 ## Features
 
-🔧 **Extensions**
+### Extensions
 
 Enhance your SwiftUI, UIKit, and AppKit types with powerful, reusable extensions:
 
-* `Color`
-* `Image`
-* `NSColor`
-* `NSImage`
-* `UIImage`
+- `Color`
+- `Image`
+- `NSColor`
+- `NSImage`
+- `UIImage`
 
-🛠 **Custom Protocols**
+### Custom Protocols
 
 Encapsulate reusable patterns for theming and customization:
 
-* `AppTheme`
-* `ColorTheme`
-* `FontTheme`
-* `ViewRepresentable`
+- `AppTheme`
+- `ColorTheme`
+- `FontTheme`
+- `ViewRepresentable`
 
-⚙️ **Utilities**
+### Utilities
 
 Simplify common patterns with flexible, reusable types and type aliases:
 
-* `ButtonType`
-* `ControlState`
-* `GradientConfiguration`
-* `GradientType`
-* `ShadowConfiguration`
-* `ShadowType`
-* `ThemedButtonStyle`
+- `ButtonType`
+- `ControlState`
+- `GradientConfiguration`
+- `GradientType`
+- `ShadowConfiguration`
+- `ShadowType`
+- `ThemedButtonStyle`
 
 ## Installation
 
@@ -109,12 +112,12 @@ follow.
 
 ### Community Health
 
-* [Code of Conduct](CODE_OF_CONDUCT.md)
-* [Contributing](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing](CONTRIBUTING.md)
 
 ### Project
 
-* [References](REFERENCES.md)
+- [References](REFERENCES.md)
 
 ## Contributing
 
