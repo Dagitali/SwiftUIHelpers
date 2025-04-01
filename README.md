@@ -53,7 +53,7 @@ readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 ### Extensions
 
-Enhance your SwiftUI, UIKit, and AppKit types with powerful, reusable extensions:
+Enhance native SwiftUI, UIKit, and AppKit types with powerful, reusable extensions:
 
 - `Color`
 - `Image`
@@ -63,7 +63,8 @@ Enhance your SwiftUI, UIKit, and AppKit types with powerful, reusable extensions
 
 ### Custom Protocols
 
-Encapsulate reusable patterns for theming and customization:
+Formalize common patterns by conforming UI-related types (e.g., themes) to new
+protocols:
 
 - `AppTheme`
 - `ColorTheme`
@@ -72,7 +73,7 @@ Encapsulate reusable patterns for theming and customization:
 
 ### Utilities
 
-Simplify common patterns with flexible, reusable types and type aliases:
+Streamline ceremony / boilerplate with flexible, reusable types and type aliases:
 
 - `ButtonType`
 - `ControlState`
