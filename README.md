@@ -50,28 +50,34 @@ readability, and adopt reusable patterns tailored for modern SwiftUI apps.
 
 🔧 **Extensions**
 
-Enhance your SwiftUI views and types with powerful, reusable methods:
+Enhance your SwiftUI, UIKit, and AppKit types with powerful, reusable extensions:
 
-* Hexadecimal color initializers for `Color`, supporting RGB and RGBA formats.
-* Conditional view modifiers for dynamic styling.
-* Adaptive backgrounds that respond to the system’s color scheme.
+* `Color`
+* `Image`
+* `NSColor`
+* `NSImage`
+* `UIImage`
 
 🛠 **Custom Protocols**
 
-Simplify common patterns with flexible, reusable abstractions:
-
-* `ShadowConfiguration` and `ShadowType` for consistent shadow styling across your app.
-* `GradientConfiguration` for standardized gradient designs.
-* `ButtonType` and `ControlState` for theming and managing button states.
-
 Encapsulate reusable patterns for theming and customization:
 
-* `ColorTheme` for centralizing colors for your app’s design system, including button colors, state
-  indicators, and background styles.
-* `FontTheme` for standardizing text styles across your app with predefined font configurations.
-* `AppTheme` for combining color, font, and gradient themes for a cohesive design language.
+* `AppTheme`
+* `ColorTheme`
+* `FontTheme`
+* `ViewRepresentable`
 
 ⚙️ **Utilities**
+
+Simplify common patterns with flexible, reusable types and type aliases:
+
+* `ButtonType`
+* `ControlState`
+* `GradientConfiguration`
+* `GradientType`
+* `ShadowConfiguration`
+* `ShadowType`
+* `ThemedButtonStyle`
 
 ## Installation
 
@@ -127,9 +133,9 @@ SwiftUIHelpers is available under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-SwiftUIHelpers is inspired by common patterns in Swift development and its declarative UI
-paradigm, aiming to reduce boilerplate code and increase productivity.  Feedback and contributions
-are always appreciated!
+SwiftUIHelpers is inspired by common patterns in Swift development and its declarative UI paradigm,
+aiming to reduce boilerplate code and increase productivity.  Feedback and contributions are always
+appreciated!
 
 Special thanks to the SwiftUI community for fostering creativity and collaboration.
 
