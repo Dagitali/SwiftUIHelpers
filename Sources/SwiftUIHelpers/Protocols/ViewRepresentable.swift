@@ -18,6 +18,10 @@
 
 import SwiftUI
 
+#if os(watchOS)
+import WatchKit
+#endif
+
 // MARK: - Public
 
 /// A protocol defining a wrapper for a `UIKit` or `AppKit` view that you use
@@ -84,9 +88,18 @@ public protocol ViewRepresentable: PlatformViewRepresentable {
     func updatePlatformView(_ platformView: PlatformViewType, context: Context)
 }
 
+#if os(watchOS)
+public struct WatchViewRepresentableContext<Representable: ViewRepresentable> {
+    // Empty context for watchOS; add properties if needed.
+}
+public extension ViewRepresentable {
+    typealias Context = WatchViewRepresentableContext<Self>
+}
+#endif
+
 // MARK: - Public (Protocol Defaults)
 
-#if canImport(UIKit)
+#if canImport(UIKit) && !os(watchOS)
 public extension ViewRepresentable where UIViewType == PlatformViewType {
     /// Creates and returns the UIKit view by calling
     /// `makePlatformView(context:)`.
@@ -130,6 +143,29 @@ public extension ViewRepresentable where NSViewType == PlatformViewType {
     ///     coordinators.
     func updateNSView(_ nsView: NSViewType, context: Context) {
         updatePlatformView(nsView, context: context)
+    }
+}
+#endif
+
+#if os(watchOS)
+public extension ViewRepresentable where PlatformViewType: WKInterfaceObject {
+    /// Creates and returns the WatchKit interface object by calling
+    /// `makePlatformView(context:)`.
+    ///
+    /// - Parameter context: A context object containing environment values and coordinators.
+    /// - Returns: A newly created `WKInterfaceObject` instance.
+    func makeWKInterfaceObject(context: Context) -> PlatformViewType {
+        return makePlatformView(context: context)
+    }
+
+    /// Updates the WatchKit interface object by delegating to
+    /// `updatePlatformView(_:context:)`.
+    ///
+    /// - Parameters:
+    ///   - wkInterfaceObject: The `WKInterfaceObject` instance to update.
+    ///   - context: A context object containing environment values and coordinators.
+    func updateWKInterfaceObject(_ wkInterfaceObject: PlatformViewType, context: Context) {
+        updatePlatformView(wkInterfaceObject, context: context)
     }
 }
 #endif
