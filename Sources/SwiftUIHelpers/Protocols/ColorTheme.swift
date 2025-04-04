@@ -10,6 +10,9 @@
 
  Abstract:
  A protocol defining an app's color theme.
+
+ References:
+ 1. https://codewithchris.com/swiftui-color/
 */
 
 import SwiftUI
@@ -89,61 +92,162 @@ public extension ColorTheme {
     // MARK: Default Core Colors
 
     /// The primary button color, defaulting to system blue.
-    var primaryColor: Color { Color(.systemBlue) }
+    var primaryColor: Color {
+#if os(watchOS)
+        Color.blue
+#elseif os(tvOS)
+        Color(.blue)
+#else
+        Color(.systemBlue)
+#endif
+    }
 
     /// The secondary color, defaulting to system green.
-    var secondaryColor: Color { Color(.systemGreen) }
+    var secondaryColor: Color {
+#if os(watchOS)
+        Color.green
+#elseif os(tvOS)
+        Color(.green)
+#else
+        Color(.systemGreen)
+#endif
+    }
 
     /// The background color, defaulting to the system background color.
-    var backgroundColor: Color { Color(.systemBackground) }
+    var backgroundColor: Color {
+#if os(watchOS) || os(tvOS)
+        Color(.black)
+#else
+        Color(.systemBackground)
+#endif
+    }
 
     /// The foreground color, defaulting to the system label color.
-    var foregroundColor: Color { Color(.label) }
+    var foregroundColor: Color {
+#if os(watchOS)
+        Color.primary
+#else
+        Color(.label)
+#endif
+    }
 
+    // TODO: Test if Color.accentColor is cross-compatible.
     /// The accent color, defaulting to the system accent color.
     var accentColor: Color { Color.accentColor }
 
     // MARK: Default Buttons
 
     /// The primary button color, defaulting to system blue.
-    var primaryButtonColor: Color { Color(.systemBlue) }
+    var primaryButtonColor: Color {
+#if os(watchOS) || os(tvOS)
+        Color(.blue)
+#else
+        Color(.systemBlue)
+#endif
+    }
 
     /// The secondary button color, defaulting to system gray.
-    var secondaryButtonColor: Color { Color(.systemGray) }
+    var secondaryButtonColor: Color {
+#if os(watchOS)
+        Color(.gray)
+#else
+        Color(.systemGray)
+#endif
+    }
 
     /// The destructive button color, defaulting to system red.
-    var destructiveButtonColor: Color { Color(.systemRed) }
+    var destructiveButtonColor: Color {
+#if os(watchOS)
+        Color(.red)
+#else
+        Color(.systemRed)
+#endif
+    }
 
     // MARK: Default Headers and Footers
 
     /// The background color for headers, defaulting to light system gray.
-    var headerBackgroundColor: Color { Color(.systemGray6) }
+    var headerBackgroundColor: Color {
+#if os(watchOS) || os(tvOS)
+        Color(.gray)
+#else
+        Color(.systemGray6)
+#endif
+    }
 
     /// The foreground color for headers, defaulting to the system label color.
-    var headerForegroundColor: Color { Color(.label) }
+    var headerForegroundColor: Color {
+#if os(watchOS)
+        Color.primary
+#else
+        Color(.label)
+#endif
+    }
 
     /// The background color for footers, defaulting to light system gray.
-    var footerBackgroundColor: Color { Color(.systemGray6) }
+    var footerBackgroundColor: Color {
+#if os(watchOS) || os(tvOS)
+        Color(.gray)
+#else
+        Color(.systemGray6)
+#endif
+    }
 
     /// The foreground color for footers, defaulting to the system secondary label color.
-    var footerForegroundColor: Color { Color(.secondaryLabel) }
+    var footerForegroundColor: Color {
+#if os(watchOS)
+        Color.secondary
+#else
+        Color(.secondaryLabel)
+#endif
+    }
 
     // MARK: Default State Indicators
 
     /// The success color, defaulting to system green.
-    var successColor: Color { Color(.systemGreen) }
+    var successColor: Color {
+#if os(watchOS)
+        Color(.green)
+#else
+        Color(.systemGreen)
+#endif
+    }
 
     /// The warning color, defaulting to system yellow.
-    var warningColor: Color { Color(.systemYellow) }
+    var warningColor: Color {
+#if os(watchOS)
+        Color(.yellow)
+#else
+        Color(.systemYellow)
+#endif
+    }
 
     /// The error color, defaulting to system red.
-    var errorColor: Color { Color(.systemRed) }
+    var errorColor: Color {
+#if os(watchOS)
+        Color(.red)
+#else
+        Color(.systemRed)
+#endif
+    }
 
     // MARK: Text Highlights
 
     /// The selection color, defaulting to a semi-transparent system blue.
-    var selectionColor: Color { Color(.systemBlue).opacity(0.2) }
+    var selectionColor: Color {
+#if os(watchOS)
+        Color(.blue).opacity(0.2)
+#else
+        Color(.systemBlue).opacity(0.2)
+#endif
+    }
 
     /// The focus color, defaulting to a more transparent system blue.
-    var focusedColor: Color { Color(.systemBlue).opacity(0.1) }
+    var focusedColor: Color {
+#if os(watchOS)
+        Color(.blue).opacity(0.1)
+#else
+        Color(.systemBlue).opacity(0.1)
+#endif
+    }
 }
