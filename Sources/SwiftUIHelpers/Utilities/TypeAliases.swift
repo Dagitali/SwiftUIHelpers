@@ -32,6 +32,9 @@ import AppKit
 #if canImport(UIKit)
 
 @available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
+public typealias PlatformApplication = UIApplication
+
+@available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public typealias PlatformColor = UIColor
 
 #if !os(watchOS)
@@ -63,6 +66,9 @@ public typealias PlatformViewRepresentable = WKInterfaceObject
 #elseif canImport(AppKit)
 
 import AppKit
+
+@available(macCatalyst 18.0, macOS 15.0, *)
+public typealias PlatformApplication = NSApplication
 
 @available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformColor = NSColor
