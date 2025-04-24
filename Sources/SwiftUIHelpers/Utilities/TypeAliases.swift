@@ -64,19 +64,19 @@ public typealias PlatformViewRepresentable = WKInterfaceObject
 
 import AppKit
 
-@available(macOS 15.0, *)
+@available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformColor = NSColor
 
-@available(macOS 15.0, *)
+@available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformGesture = NSClickGestureRecognizer
 
-@available(macOS 15.0, *)
+@available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformImage = NSImage
 
-@available(macOS 15.0, *)
+@available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformView = NSView
 
-@available(macOS 15.0, *)
+@available(macCatalyst 18.0, macOS 15.0, *)
 public typealias PlatformViewRepresentable = NSViewRepresentable
 
 #endif

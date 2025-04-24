@@ -20,7 +20,7 @@ import SwiftUI
 ///
 /// This struct centralizes shadow properties, including its color, blur radius, and horizontal and vertical
 /// offsets, for consistent theming across the app.
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
+@available(iOS 18.0, macCatalyst 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public struct ShadowConfiguration {
     /// The color of the shadow.
     public let color: Color

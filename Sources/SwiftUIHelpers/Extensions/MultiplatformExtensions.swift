@@ -9,7 +9,7 @@
  See the LICENSE.txt file for this package’s licensing information.
 
  Abstract:
- Helper extensions for simplifying multiplatform development.
+ Helper extensions for simplifying multi-platform development.
 */
 
 #if canImport(UIKit)
@@ -20,13 +20,18 @@ import AppKit
 
 // MARK: - Public
 
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
+#if canImport(UIKit)
+@available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public extension PlatformImage {
     var imageData: Data? {
-#if canImport(UIKit)
         pngData()
-#elseif canImport(AppKit)
-        tiffRepresentation
-#endif
     }
 }
+#elseif canImport(AppKit)
+@available(macCatalyst 18.0, macOS 15.0, *)
+public extension PlatformImage {
+    var imageData: Data? {
+        tiffRepresentation
+    }
+}
+#endif

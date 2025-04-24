@@ -19,7 +19,7 @@ import SwiftUI
 /// A protocol for theming an app's fonts.
 ///
 /// This protocol centralizes font themes for various text styles in your app.
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
+@available(iOS 18.0, macCatalyst 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public protocol FontTheme {
     // MARK: Text Styles
 

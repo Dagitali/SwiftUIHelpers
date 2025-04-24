@@ -9,7 +9,7 @@
  See the LICENSE.txt file for this package’s licensing information.
 
  Abstract:
- Helper extensions for working with `NSImage` types.
+ Helper extensions for working with the `NSImage` type.
 */
 
 #if canImport(AppKit)
