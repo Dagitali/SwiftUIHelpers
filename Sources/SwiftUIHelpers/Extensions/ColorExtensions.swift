@@ -9,14 +9,14 @@
  See the LICENSE.txt file for this package’s licensing information.
 
  Abstract:
- Helper extensions for working with `Color` types.
+ Helper extensions for working with the `Color` type.
 */
 
 import SwiftUI
 
 // MARK: - Public
 
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
+@available(iOS 18.0, macCatalyst 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public extension Color {
     // MARK: Initializers
 
