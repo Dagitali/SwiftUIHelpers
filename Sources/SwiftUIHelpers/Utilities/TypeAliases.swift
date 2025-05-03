@@ -32,20 +32,18 @@ import AppKit
 #if canImport(UIKit)
 
 @available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
-public typealias PlatformApplication = UIApplication
-
-@available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public typealias PlatformColor = UIColor
-
-#if !os(watchOS)
-@available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)
-public typealias PlatformGesture = UITapGestureRecognizer
-#endif
 
 @available(iOS 18.0, tvOS 18.0, visionOS 2.0, watchOS 11.0, *)
 public typealias PlatformImage = UIImage
 
 #if !os(watchOS)
+
+@available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)
+public typealias PlatformApplication = UIApplication
+
+@available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)
+public typealias PlatformGesture = UITapGestureRecognizer
 
 @available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)
 public typealias PlatformView = UIView
@@ -54,6 +52,9 @@ public typealias PlatformView = UIView
 public typealias PlatformViewRepresentable = UIViewRepresentable
 
 #else
+
+@available(watchOS 11.0, *)
+public typealias PlatformApplication = WKExtension
 
 @available(watchOS 11.0, *)
 public typealias PlatformView = WKInterfaceObject
