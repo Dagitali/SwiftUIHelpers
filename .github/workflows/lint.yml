@@ -11,10 +11,9 @@
 # 3. https://docs.github.com/en/actions
 
 ---
-
 name: Lint
 
-on:
+'on':
   pull_request:       # Allow automatic triggering for PRs.
     branches:
       - 'bugfix/**'
@@ -23,14 +22,24 @@ on:
       - opened
       - closed
       - labeled
+  push:
+    branches: [develop, main]
   workflow_dispatch:  # Allow manual triggering.
+  workflow_call:
+
+permissions:
+  contents: read
 
 jobs:
   lint:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        # Pinned v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
       - name: Set up Swift environment
         run: |
           sudo apt-get update
@@ -41,7 +50,10 @@ jobs:
           source ~/.venv/bin/activate
       - name: Install Pre-Commit
         run: |
-          pip install pre-commit
+          pip install pre-commit==4.7.0 yamllint==1.38.0
       - name: Run Pre-Commit hooks
+        env:
+          # The local commit guard does not apply to CI checkouts.
+          SKIP: no-commit-to-branch
         run: |
-          pre-commit run --all-files
+          pre-commit run --all-files --show-diff-on-failure

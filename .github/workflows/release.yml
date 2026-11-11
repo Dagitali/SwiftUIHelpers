@@ -44,10 +44,9 @@
 # 6. https://nvie.com/posts/a-successful-git-branching-model/
 
 ---
-
 name: Release
 
-on:
+'on':
   pull_request:       # Allow automatic triggering for PRs.
     types:
       - closed
@@ -57,6 +56,9 @@ on:
         type: string
         required: true
         description: "SemVer version to release"
+
+permissions:
+  contents: read
 
 jobs:
   release:
