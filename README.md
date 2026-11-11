@@ -17,21 +17,20 @@
 A Swift package that includes an integrated collection of SwiftUI extensions and related custom
 abstractions.
 
-- [SwiftUIHelpers](#swiftuihelpers)
-  - [Overview](#overview)
-  - [Features](#features)
-    - [Extensions](#extensions)
-    - [Custom Protocols](#custom-protocols)
-    - [Utilities](#utilities)
-  - [Installation](#installation)
-    - [Using Swift Package Manager (SPM)](#using-swift-package-manager-spm)
-  - [Testing](#testing)
-  - [Documentation](#documentation)
-    - [Community Health](#community-health)
-    - [Project](#project)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
+- [Overview](#overview)
+- [Features](#features)
+  - [Extensions](#extensions)
+  - [Custom Protocols](#custom-protocols)
+  - [Utilities](#utilities)
+- [Installation](#installation)
+  - [Using Swift Package Manager (SPM)](#using-swift-package-manager-spm)
+- [Testing](#testing)
+- [Documentation](#documentation)
+  - [Community Health](#community-health)
+  - [Project](#project)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -81,6 +80,7 @@ Streamline ceremony / boilerplate with flexible, reusable types and type aliases
 - `GradientType`
 - `ShadowConfiguration`
 - `ShadowType`
+- `SheetActionLayout`
 - `ThemedButtonStyle`
 
 ## Installation
@@ -99,7 +99,7 @@ To integrate SwiftUIHelpers into your project:
 
 ## Testing
 
-The package includes a comprehensive test suite to ensure reliability.  Run tests with:
+Run package tests of SwiftUIHelpers on macOS with:
 
 ```bash
 swift test
