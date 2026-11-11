@@ -1,0 +1,11 @@
+# actionlint.yaml
+# SwiftUIHelpers
+#
+# Copyright © 2026 Dagitali LLC. All rights reserved.
+#
+# Recognize the Xcode 27 hosted runner label.
+
+---
+self-hosted-runner:
+  labels:
+    - xcode-27
