@@ -12,21 +12,25 @@
 # 4. https://docs.github.com/en/actions
 
 ---
-
 name: Publish
 
-on:
+'on':
   push:               # Allow automatic triggering for pushes.
     tags:
       - v*.*.*
+
+permissions:
+  contents: read
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-
+        # Pinned v7.0.1
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
         with:
